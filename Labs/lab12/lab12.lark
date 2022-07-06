@@ -1,0 +1,21 @@
+    
+    link: "Link(" link_first ","* link_rest* ")"
+    
+    ?link_first: INTEGER | link_rest
+    
+    ?link_rest: link
+    
+    INTEGER: /-?\d+/
+
+    %ignore /\s+/
+    %import common.NUMBER
+    
+    tree_node: "Tree(" label ","* branches* ")" ","*     
+    
+    ?label: INTEGER
+    
+    branches: "[" tree_node* "]"
+
+    %ignore /\s+/
+    %import common.NUMBER
+
